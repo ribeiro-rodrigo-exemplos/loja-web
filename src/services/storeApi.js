@@ -19,12 +19,12 @@ const produtos = [
 export default class StoreAPI{
     
     get categories(){
-        return axios.get('http://localhost:3000/categories')
+        return axios.get('http://198.211.99.54:3000/categories')
                     .then(resp => resp.data); 
     }
 
     get products (){
-        return axios.get('http://localhost:3000/products')
+        return axios.get('http://198.211.99.54:3000/products')
                     .then(resp => resp.data);  
     }
 

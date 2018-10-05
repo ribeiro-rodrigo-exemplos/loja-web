@@ -46,18 +46,19 @@ export default class ProductList extends Component {
             else
                 return p; 
         })
-
+        console.log(products)
         this.setState({...this.state,products}); 
     }
 
     _saveProductCart(product){
         let products = this._restoreProducts().map(p => {
-            if(p.id == product.id)
+            if(p._id == product._id)
                 return product; 
             else
                 return p; 
         })
 
+        console.log(products)
         this._saveProductsCart(products); 
 
     }
