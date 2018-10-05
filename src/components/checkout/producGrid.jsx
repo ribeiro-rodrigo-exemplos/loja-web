@@ -9,7 +9,7 @@ export default props => {
     const renderProducts = () => {
         
         return products.map(product => (
-            <li className="list-group-item d-flex justify-content-between lh-condensed">
+            <li key={product._id} className="list-group-item d-flex justify-content-between lh-condensed">
                 <div>
                     <h6 className="my-0">{product.name}</h6>
                 </div>
