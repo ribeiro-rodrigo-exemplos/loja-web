@@ -7,7 +7,7 @@ export default props => (
         <div className="container">
             <h1 className="jumbotron-heading">Sua Loja Favorita</h1>
             <p className="lead text-muted">
-                Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.
+                Escolha seus produtos. Nossa loja tem uma variedade de intens interessantes para lhe oferecer.
             </p>
         </div>
     </section>

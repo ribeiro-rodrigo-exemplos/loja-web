@@ -1,6 +1,42 @@
 :root {
     --jumbotron-padding-y: 3rem;
   }
+
+  .loader {
+    position: fixed;
+    width: 40%;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.75);
+    padding: 3% 3%;
+    text-align: center;
+  }
+
+  .loader > header{
+    font-size: 2em;
+    color: green;
+  }
+
+  .customModal {
+    position: fixed;
+    width: 40%;
+    background-color: #FFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.75);
+    padding: 3% 3%;
+    text-align: center;
+  }
+
+  .customModal > header{
+    font-size: 2em;
+    color: green;
+  }
   
   .jumbotron {
     padding-top: var(--jumbotron-padding-y);
@@ -51,6 +87,30 @@
     .jumbotron {
       padding-top: 100px; 
     }
+
+    .customModal {
+      position: fixed;
+      width: 80%;
+      background-color: #FFF;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.75);
+      padding: 8% 3%;
+      text-align: center;
+      font-size: 1em;
+    }
+  
+    .customModal > header{
+      font-size: 1.5em;
+      color: green;
+    }
+
+    .loader > header{
+      font-size: 1em;
+      color: green;
+    }
   }
 
   .container-checkout {
@@ -74,3 +134,5 @@
   .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
   
   .lh-condensed { line-height: 1.25; }
+
+ 
