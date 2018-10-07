@@ -169,12 +169,14 @@ export default class Checkout extends Component{
     }
 
     _requestBuy(e){
+        
+        e.preventDefault()
 
         this.setState({...this.state,loader:{display:''}})  
 
         setTimeout(() => {
             this.setState({...this.state,loader:{display:'none'},modal:{display:''}})
-        },4000); 
+        },4000);
     }
 }
 
