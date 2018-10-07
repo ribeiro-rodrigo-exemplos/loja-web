@@ -24,7 +24,7 @@ export default class Checkout extends Component{
                     </div>
                     <div className="col-md-8 order-md-1">
                         <h4 className="mb-3">Dados do comprador</h4>
-                        <form className="needs-validation" onSubmit={this._requestBuy.bind(this)}>
+                        <form noValidate className="needs-validation" onSubmit={this._requestBuy.bind(this)}>
                             <div className="row">
                                 <div className="col-md-6 mb-3">
                                     <label htmlFor="firstName">Nome*</label>
@@ -91,7 +91,7 @@ export default class Checkout extends Component{
                 </div>
 
                 <div className="loader" style={this.state.loader}>
-                <header>Aguarde...</header>
+                    <header>Aguarde...</header>
                     <img className="img-fluid" src="img/spinner.gif"/>
                 </div>
 

@@ -13,7 +13,7 @@ import StoreApi from '../../services/storeApi'
 export default class ProductList extends Component {
     constructor(props){
         super(props);
-        this.state = {categories:[]}
+        this.state = {categories:[],loader:{display:''}}
         this._storeApi = new StoreApi();
         
         this._findCategories(); 
@@ -31,6 +31,10 @@ export default class ProductList extends Component {
                         handleCategory={this._selectCategory.bind(this)}
                         handleOrderPrice={this._selectOrderPrice.bind(this)}/>
                     <ProductGrid cols="3" products={this.state.products || []} clickHandler={this._addProductCart.bind(this)}/> 
+                    <div className="loader" style={this.state.loader}>
+                        <header>Carregando...</header>
+                        <img className="img-fluid" src="img/spinner.gif"/>
+                    </div>
                 </main> 
             </div>
         )
@@ -120,7 +124,7 @@ export default class ProductList extends Component {
         const productsInCart = JSON.parse(sessionStorage.getItem('products') || '[]').filter(product => product.added) 
 
         this._storeApi.products.then(products => {
-
+        
             products = products.map(product => {
                 if(productsInCart.some(p => p._id == product._id))
                     return {...product,added:true}
@@ -129,7 +133,7 @@ export default class ProductList extends Component {
             })
 
             this._saveProductsCart(products); 
-            this.setState({...this.state,products})
+            this.setState({...this.state,products,loader:{display:'none'}})
         })
     }
 
